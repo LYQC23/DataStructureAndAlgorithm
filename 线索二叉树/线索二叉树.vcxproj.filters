@@ -18,10 +18,8 @@
     <ClCompile Include="..\二叉树的链式存储\源.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\二叉树的链式存储\function.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
+    <ClCompile Include="ThreadTree.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,16 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
-/*
-*二叉排序树的创建，中序遍历，查找，删除
-*/
 
+//二叉排序树的创建，中序遍历，查找，删除
 typedef int KeyType;
 typedef struct BSTNode {
 	KeyType key;
 	struct BSTNode* lchild, * rchild;
 }BSTNode, * BiTree;
-
-//插入一个节点
+//54,20,66,40,28,79,58
 int BST_Insert(BiTree& T, KeyType k)
 {
 	if (NULL == T)
@@ -27,7 +24,6 @@ int BST_Insert(BiTree& T, KeyType k)
 	else
 		return BST_Insert(T->rchild, k);
 }
-
 //创建二叉排序树
 void Creat_BST(BiTree& T, KeyType str[], int n)
 {
@@ -39,8 +35,7 @@ void Creat_BST(BiTree& T, KeyType str[], int n)
 		i++;
 	}
 }
-
-//查找 返回的是节点
+//递归算法简单，但执行效率较低，递归实现留给大家编写
 BSTNode* BST_Search(BiTree T, KeyType key, BiTree& p)
 {
 	p = NULL;//存储要找的结点的父亲
@@ -53,7 +48,6 @@ BSTNode* BST_Search(BiTree T, KeyType key, BiTree& p)
 	return T;
 }
 
-//删除节点
 void DeleteNode(BiTree& root, KeyType x) {
 	if (root == NULL) {
 		return;
@@ -82,7 +76,7 @@ void DeleteNode(BiTree& root, KeyType x) {
 				tempNode = tempNode->rchild;
 			}
 			root->key = tempNode->key;
-			DeleteNode(root->lchild, tempNode->key);//将原左子树最大节点删除
+			DeleteNode(root->lchild, tempNode->key);
 		}
 	}
 }
@@ -96,6 +90,7 @@ void InOrder(BiTree T)
 		InOrder(T->rchild);
 	}
 }
+
 
 int main()
 {

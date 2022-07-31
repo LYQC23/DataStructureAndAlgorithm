@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\二叉树的链式存储\源.cpp">
+    <ClCompile Include="BST.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
